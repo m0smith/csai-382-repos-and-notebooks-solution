@@ -1,0 +1,15 @@
+category,item_id,item_name,metric,order_count,order_hour,total_quantity,total_revenue
+,5,Soft Drink,top_items,,,4,
+,2,Cheese Pizza,top_items,,,3,
+,1,Classic Burger,top_items,,,1,
+,3,Greek Salad,top_items,,,1,
+,4,Chicken Wings,top_items,,,1,
+Pizza,,,revenue_by_category,,,,34.47
+Beverage,,,revenue_by_category,,,,10.0
+Appetizer,,,revenue_by_category,,,,9.75
+Burger,,,revenue_by_category,,,,8.99
+Salad,,,revenue_by_category,,,,7.5
+,,,busiest_hour,2,11,,
+,,,busiest_hour,2,12,,
+,,,busiest_hour,2,13,,
+,,,busiest_hour,1,14,,

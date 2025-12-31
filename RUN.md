@@ -1,6 +1,6 @@
 # How to Run the Notebooks
 
-Follow these steps to reproduce the notebook analysis with the provided datasets.
+Follow these steps to reproduce the Lab 2.4 ETL notebook and its artifacts.
 
 ## 1) Clone and set up the environment
 1. Clone the repository and enter the folder:
@@ -13,7 +13,11 @@ Follow these steps to reproduce the notebook analysis with the provided datasets
    python -m venv .venv
    source .venv/bin/activate
    ```
-3. Install any required Python packages listed by your instructor or notebook cells (e.g., via `pip install -r requirements.txt` if provided).
+3. Install dependencies (pandas, PyYAML, numpy) or run with the built-in pure-Python fallback:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   If you cannot install packages, the notebook will still run using the standard library.
 
 ## 2) Data availability
 - The Week 1 datasets are stored in the `data/` directory:
@@ -21,7 +25,7 @@ Follow these steps to reproduce the notebook analysis with the provided datasets
   - `data/order_details.csv`
 - These files are read directly by the notebooks; no additional downloads are required.
 
-## 3) Run the notebooks
+## 3) Run `notebooks/lab_2_4_repro_logging.ipynb`
 1. Launch Jupyter Lab or Jupyter Notebook:
    ```bash
    jupyter lab
@@ -30,13 +34,12 @@ Follow these steps to reproduce the notebook analysis with the provided datasets
    ```bash
    jupyter notebook
    ```
-2. Open the relevant notebook(s) and run all cells in order.
+2. Open `lab_2_4_repro_logging.ipynb` and run all cells in order. The notebook sets seeds, configures logging, hashes the input CSVs, and computes three metrics.
+3. Artifacts produced during the run:
+   - Timestamped log file in `logs/run_*.log`.
+   - Data hashes in `data_hashes.json`.
+   - Stacked metrics CSV in `etl_pipeline/metrics_*.csv`.
+   - Updated `requirements.txt` from the current environment.
 
-## 4) Outputs and logs
-- Notebook outputs (charts, tables, etc.) are saved alongside the notebook unless a cell writes them elsewhere.
-- Runtime logs should be directed to the `logs/` directory. Create log files inside `logs/` when adding logging to notebooks or scripts (e.g., via Python's `logging` module).
-- Configuration defaults can be stored in `config.yaml` (see below).
-
-## 5) Optional configuration
-- The `config.yaml` file is provided as a placeholder for any parameters you want to centralize (e.g., file paths, database URIs, or experiment settings).
-- Update keys in `config.yaml` and import them in your notebooks/scripts as needed.
+## 4) Optional configuration
+- Edit `config.yaml` to change data, log, or output directories. If PyYAML is installed, the notebook will read these overrides; otherwise, it will use the defaults baked into the code.

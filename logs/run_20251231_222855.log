@@ -1,0 +1,11 @@
+2025-12-31 22:28:55,460 | INFO | Starting reproducibility and logging ETL run
+2025-12-31 22:28:55,460 | INFO | Python runtime: 3.11.12
+2025-12-31 22:28:55,464 | INFO | Platform: Linux-6.12.13-x86_64-with-glibc2.39
+2025-12-31 22:28:55,464 | INFO | Active paths: {'data_dir': 'data', 'logs_dir': 'logs', 'output_dir': 'etl_pipeline'}
+2025-12-31 22:28:55,465 | INFO | Seeds initialized for reproducibility
+2025-12-31 22:28:55,794 | INFO | Wrote pip freeze to /workspace/csai-382-repos-and-notebooks-solution/requirements.txt
+2025-12-31 22:28:55,794 | INFO | SHA-256 for order_details.csv: db3f729469615040852a1c00461d08e78c7c958bf159be37e695df072d919507
+2025-12-31 22:28:55,795 | INFO | SHA-256 for menu_items.csv: 61bcee18a5a140d8e6728af8a1c34acde5106d0fb92aec5ab553c90a67c122eb
+2025-12-31 22:28:55,795 | INFO | Saved data hashes to /workspace/csai-382-repos-and-notebooks-solution/data_hashes.json
+2025-12-31 22:28:55,795 | INFO | Loaded and merged 7 rows with pure Python fallback
+2025-12-31 22:28:55,798 | INFO | Saved metrics to /workspace/csai-382-repos-and-notebooks-solution/etl_pipeline/metrics_20251231_222855.csv

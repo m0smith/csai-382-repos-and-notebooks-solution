@@ -3,7 +3,7 @@
 paths:
   data_dir: data
   logs_dir: logs
-  output_dir: notebooks
+  output_dir: etl_pipeline
 
 runtime:
   log_level: INFO
